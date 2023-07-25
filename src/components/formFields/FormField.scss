@@ -1,0 +1,278 @@
+@import '../../utilis/colors';
+@import '../../utilis/mixins';
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  gap: 4px;
+}
+
+label {
+  @include gilroy-medium500;
+  font-size: 16px;
+  color: $modal-label-color;
+
+  padding-bottom: 4px;
+}
+
+.input-field {
+  padding: 8px 16px;
+  gap: 8px;
+
+  @include gilroy-medium;
+  font-size: 14px;
+  background-color: white;
+  color: $modal-input-text-color;
+  width: 400px;
+  border-radius: 6px;
+  border: solid 2px;
+  border-color: $modal-border-color;
+}
+
+.currency-input-wrapper {
+  width: 100%;
+}
+
+#salary-with-currency {
+  width: 100%;
+}
+
+.currency-input {
+  width: 100%;
+}
+
+.file-upload-button {
+  width: 104px;
+  height: 104px;
+
+  background: linear-gradient(0deg, $upload-button-gradient-first-color, $upload-button-gradient-first-color),
+  linear-gradient(0deg, $upload-button-gradient-second-color, $upload-button-gradient-second-color);
+
+  border-style: none;
+}
+
+.file-upload-button * {
+  cursor: pointer;
+}
+
+.file-upload-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  width: 100%;
+  height: 100%;
+
+  @include gilroy-medium;
+  font-size: 14px;
+}
+
+
+button[data-style] {
+  background: none;
+  color: inherit;
+  border: none;
+  font: inherit;
+  outline: inherit;
+
+  padding: 8px 16px;
+  border-radius: 6px;
+  @include inter-medium600;
+  font-size: 16px;
+
+  cursor: pointer;
+}
+
+button[data-style="primary"] {
+  background-color: $primary-color;
+  color: white;
+}
+
+button[data-style="secondary"] {
+  color: $secondary-button-text-color;
+
+  border: 1px solid $primary-color;
+}
+
+#salary-with-currency {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 8px;
+
+  select {
+    @include gilroy-medium;
+    font-size: 14px;
+    background-color: white;
+    color: $modal-input-text-color;
+    border-radius: 6px;
+    padding: 8px 16px;
+    border-style: solid;
+  }
+}
+
+.date-range-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+}
+
+.date-range-input {
+  padding: 8px 43px;
+  gap: 16px; 
+  @include gilroy-medium;
+  background-color: $white-color;
+  color: #6C6D75;
+  border-radius: 6px;
+  border-style: solid;
+}
+
+.date-range-separator {
+  margin: 0 16px;
+  font-size: 35px;
+  padding-bottom: 3px;
+}
+
+.date-range-separator-to {
+  margin: 0 16px;
+  font-size: 15px;
+  padding-bottom: 3px;
+}
+
+.date-range-input {
+  padding-left: 16px;
+  flex-grow: 1;
+}
+
+.date-range-input {
+  .ant-picker-input {
+  display: block ruby;
+}
+}
+
+
+.input-field-multiselect {
+
+  @include gilroy-medium;
+  font-size: 14px;
+  background-color: $white-color;
+  color: $modal-input-text-color;
+
+  width: 435px;
+
+  border-radius: 6px;
+
+}
+
+.input-field-select {
+  padding: 8px 16px;
+  gap: 8px;
+
+  @include gilroy-medium;
+  font-size: 14px;
+  background-color: $white-color;
+  color: $modal-input-text-color;
+  width: 435px;
+  border-radius: 6px;
+  border: solid 2px;
+  border-color: $modal-border-color;
+}
+
+
+.input-field-multiselect {
+  @include gilroy-medium;
+  color: $modal-input-text-color;
+  width: 435px;
+  border-radius: 6px;
+
+}
+
+.selected-developer {
+  width: 435px;
+justify-content: space-between;
+display: flex;
+}
+
+.ant-select-selector {
+  height: 35px;
+  cursor:pointer !important;
+}
+
+.developer-option {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-wrapper {
+  margin-right: 8px;
+}
+
+.developer-name {
+  margin-left:10px;
+}
+
+.employment-type-select {
+  margin-right: 9px
+}
+
+.anticon-close {
+  color: $dark-red-color;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
+}
+
+:where(.css-dev-only-do-not-override-1wazalj)[class^="ant-select"] [class^="ant-select"]::after {
+  display:none;
+}
+
+.input-field-new {
+  padding: 8px 16px;
+  gap: 8px;
+  @include gilroy-medium;
+  font-size: 14px;
+  background-color: $white-color;
+  color: $modal-input-text-color;
+  width: 435px;
+  border-radius: 6px;
+  border-style: solid;
+}
+
+
+
+      .ant-select-selection-item {
+      font-size:12px ;
+      }
+    
+      .input-field::placeholder {
+        color: $modal-placeholder-color; 
+      }
+
+      .form-field {
+      .ant-select-selection-item-content {
+      display:none ;
+      }
+
+      .ant-select-selection-item-remove {
+        display:none ;
+      }
+        .ant-select-selection-item {
+          display: none;
+        }
+
+        .ant-select-selection-overflow {
+          margin-left: 15px;
+        }
+    }
+
+

@@ -1,0 +1,132 @@
+@import '../../utilis/colors';
+@import '../../utilis/mixins';
+
+.sidebar-container {
+  display: flex;
+  flex-direction: column;
+
+  padding: 30px;
+
+  background: linear-gradient(179.32deg, $background-gradient-first-color 8.04%, $background-gradient-second-color 99.41%);
+  border-right: 1px solid $border-color;
+
+  min-height: 100vh;
+}
+
+.logo-section {
+  margin-bottom: 30px;
+}
+
+.profile-picture-section {
+  width: 54px;
+  height: 54px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-profile-overview {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  border-radius: 6px;
+  padding: 10px;
+
+  border: 2px solid $border-color;
+}
+
+.user-name {
+  margin-bottom: 5px;
+
+  @include inter-medium();
+  font-size: 16px;
+  line-height: 24px;
+  color: $text-color-dark-gray;
+
+  white-space: nowrap;
+}
+
+.user-role {
+  @include inter-medium400();
+  font-size: 14px;
+  line-height: 18px;
+  color: $text-color-primary;
+}
+
+.user-info-section * {
+  margin: 0;
+  padding: 0;
+}
+
+.user-info-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  margin-left: 15px;
+  margin-right: 60px;
+}
+
+.expand-user-info-section {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+
+.sidebar-options {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: flex-start;
+
+  margin-top: 20px;
+
+  gap: 8px;
+}
+
+.sidebar-option {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 5px;
+
+  padding: 12px 0 12px 14px;
+}
+
+.sidebar-option a {
+  margin-left: 20px;
+
+  @include gilroy-medium();
+  font-size: 14px;
+  line-height: 16px;
+  color: $text-color-secondary;
+
+  text-decoration: none;
+}
+
+.inactive-sidebar-option span {
+  margin-left: 20px;
+
+  @include gilroy-medium();
+  font-size: 14px;
+  line-height: 16px;
+  color: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+
+  text-decoration: none;
+}
+
+.inactive-sidebar-option svg {
+  opacity: 0.3;
+}
+
+.sidebar-option:has(> .sidebar-active-link) {
+  a {
+    @include gilroy-medium700();
+  }
+  background-color: $sidebar-active-link-background-color;
+  border-radius: 6px;
+}
